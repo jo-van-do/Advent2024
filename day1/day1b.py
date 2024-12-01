@@ -4,8 +4,6 @@ f.close()
 
 left_nos = []
 right_nos = []
-total_left = 0
-total_right = 0
 sim_score = 0
 
 for line in lines:
@@ -16,8 +14,10 @@ for line in lines:
 no_dict = {key: [] for key in set(left_nos)}
 
 for key in no_dict:
+    
     total_left = 0
     total_right = 0
+    
     for no in left_nos:
         if no == key:
             total_left += 1
@@ -25,8 +25,6 @@ for key in no_dict:
         if no == key:
             total_right += 1
     sim_score += key * total_right * total_left 
-    
-    no_dict[key] = [total_left, total_right]
 
 print(sim_score)
 
