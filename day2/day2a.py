@@ -18,8 +18,6 @@ def inc_or_dec(report):
     elif all(report[i] >= report[i + 1] for i in range(len(report) - 1)):
         inc_or_dec = True
     
-    print(inc_or_dec)
-    
     return inc_or_dec
 
 
