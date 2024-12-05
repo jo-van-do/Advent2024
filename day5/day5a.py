@@ -1,7 +1,6 @@
 
 import string
 
-rulebook = []
 rules = []
 pages = []
 middle_nums = []
