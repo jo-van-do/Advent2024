@@ -122,18 +122,6 @@ class Agent:
         
         return self.map
     
-    
-    def count_positions(self):
-        """
-        Count all distinct positions that the agent has visited
-
-        """
-        count = 0
-        for row in self.map:
-            count += row.count('X')
-    
-        return count
-    
     def check_loop(self,obstacle):
         """
         Check if placing an object in front of agent will result in a loop
@@ -204,8 +192,8 @@ class Agent:
     
     def hinder_agent(self):
         """
-        Let's agent walk in environment until he walks out.
-        Return amount of loops could be made by placing objects on agent's path
+        Place objects on the agent's path BEFORE their route starts 
+        Returns for how many object locations the agent gets stuck in a loop
         """
         
         coords = self.get_coords()
