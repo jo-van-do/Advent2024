@@ -9,8 +9,6 @@ def diag_xmas(text, i, j):
     left = text[i-1][j-1] + text[i+1][j+1]
     right = text[i-1][j+1] + text[i+1][j-1]
     
-    print(left, right)
-    
     if left == 'MS' or left == 'SM':
         if right == 'MS' or right == 'SM':
             n_xmas = 1

@@ -87,9 +87,14 @@ class Agent:
     
     def visualise_map(self):
         """
-        Print map with agent route
+        Save map with agent route
         """
-        
+        with open(".\day6\\route.txt", "w") as output:
+            for line in self.map:
+                for value in line:
+                    output.write(value)
+                output.write('\n')
+                
         return self.map
     
     
@@ -125,4 +130,4 @@ class Agent:
 
 ag = Agent(position=begin, map=map, direction='up')
 ag.play()
-
+ag.visualise_map()
