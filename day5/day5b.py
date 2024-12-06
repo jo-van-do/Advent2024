@@ -1,11 +1,7 @@
-
-import string
-
 rules = []
 pages = []
 middle_nums = []
 incorrects = []
-
 
 def is_bigger(page1, page2):
     if "{0}>{1}".format(page1, page2) in rules:
@@ -19,8 +15,6 @@ def get_middle(alist):
     return alist[middle]
 
 
-
-
 with open('day5\data5.txt', 'r') as f:
     for line in f.read().split('\n'):
         if '|' in line:
@@ -28,7 +22,6 @@ with open('day5\data5.txt', 'r') as f:
         else:
             pages.append(line)
 f.close()
-
 
 
 for pageline in pages[1:]:
